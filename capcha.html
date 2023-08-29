@@ -1,50 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animated Login From</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha</title>
+    <link rel="stylesheet" href="capcha.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form >
+          <input type="text" placeholder="Username" /><br />
+          <input type="text" placeholder="Password" /><br />
+          <!-- <button type="submit" class="container2">SUBMIT</button><br /> -->
+        </form>
 
-    <link rel="stylesheet" href="capcha.css" />
-  </head>
-  <body>
-    <div class="login_form_container">
-      <div class="login_form">
-        <h2>Login</h2>
-        <div class="input_group">
-          <i class="fa fa-user"></i>
-          <input
-            type="text"
-            placeholder="Username"
-            class="input_text"
-            autocomplete="off"
-          />
-        </div>
-        <div class="input_group">
-          <i class="fa fa-unlock-alt"></i>
-          <input
-            type="password"
-            placeholder="Password"
-            class="input_text"
-            autocomplete="off"
-          />
-        </div>
-        <div class="button_group" id="login_button">
-          <a>Submit</a>
-        </div>
-        <div class="fotter">
-          <a>Forgot Password ?</a>
-          <a>SingUp</a>
-        </div>
+        <div class="wrapper">
+            <header>Captcha</header>
+            <div class="captcha-area">
+              <div class="captcha-img">
+                <span class="captcha"></span>
+              </div>
+              <button class="reload-btn"><i class="fas fa-redo-alt"></i></button>
+            </div>
+            <form action="#" class="input-area">
+              <input type="text" class="style" placeholder="Enter captcha" maxlength="6" spellcheck="false" required>
+              <button class="check-btn">Check</button>
+            </form>
+            <div class="status-text" style="font-size: x-small;"></div>
+          </div>
+          <br>
+
+          <button type="submit" class="container2">SUBMIT</button>
+          <script src="capcha.js"></script>
       </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="capcha.js"></script>
-  </body>
+</body>
 </html>
